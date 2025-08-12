@@ -13,7 +13,7 @@ interface ResponseInterface {
 
 const Register = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false);
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  // const [isOpen, setIsOpen] = useState<boolean>(true);
   const navigate = useNavigate();
 
   interface FormValues {
