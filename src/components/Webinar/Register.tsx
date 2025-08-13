@@ -24,6 +24,7 @@ const Register = () => {
     companyName: string;
     role: string;
     concerns: string;
+    gender: string;
   }
 
   const initialValues = {
@@ -34,31 +35,32 @@ const Register = () => {
     companyName: "",
     role: "",
     concerns: "",
+    gender: "",
   };
   const onSubmit = async (
     payload: FormValues,
     actions: FormikHelpers<FormValues>
   ) => {
-    try {
-      const res: ResponseInterface = await Axios.post(
-        `${Request.register}`, 
-        payload
-      );
-      console.log(res);
+    // try {
+    //   const res: ResponseInterface = await Axios.post(
+    //     `${Request.register}`,
+    //     payload
+    //   );
+    //   console.log(res);
 
-      if (res.success) {
-        toast.success(res.data.message)
-      }
-    } catch (error: any) {
-      if (error.response)
-        toast.error(
-          error?.response.data.message || "An error occurred, try again"
-        );
-    }
+    //   if (res.success) {
+    //     toast.success(res.data.message);
+    //   }
+    // } catch (error: any) {
+    //   if (error.response)
+    //     toast.error(
+    //       error?.response.data.message || "An error occurred, try again"
+    //     );
+    // }
 
     console.log(payload);
     // setIsOpen(true);
-    navigate("/register/success")
+    navigate("/register/success");
     await new Promise((resolve) => setTimeout(resolve, 1000));
     actions.resetForm();
   };
@@ -174,6 +176,58 @@ const Register = () => {
           />
           {errors.email && touched.email && (
             <p className="text-red-500 text-sm font-medium">{errors.email}</p>
+          )}
+        </div>
+
+        {/* <div>
+          <label
+            htmlFor="gender"
+            className="block text-sm font-medium text-[#F4F4F5] mb-2"
+          >
+            Gender
+          </label>
+          <select
+            id="gender"
+            name="gender"
+            value={values.gender}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={`w-full px-3 py-3 border ${
+              values.gender ? "border-[#2F9E44] border-2" : "border-[#CFCFCF]"
+            } text-[#F4F4F5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2F9E44]  focus:border-transparent ${
+              errors.gender && touched.gender ? "border border-red-500" : ""
+            }`}
+          />
+          {errors.gender && touched.gender && (
+            <p className="text-red-500 text-sm font-medium">{errors.gender}</p>
+          )}
+        </div> */}
+        <div>
+          <label
+            htmlFor="gender"
+            className="block text-sm font-medium text-[#F4F4F5] mb-2"
+          >
+            Gender
+          </label>
+          <select
+            id="gender"
+            name="gender"
+            value={values.gender}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={`w-full px-3 py-3 border ${
+              values.gender ? "border-[#2F9E44] border-2" : "border-[#CFCFCF]"
+            }  text-[#0B0B0F] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2F9E44] focus:text-[#F4F4F5] focus:border-transparent ${
+              errors.gender && touched.gender ? "border border-red-500" : ""
+            }`}
+          >
+            <option className=" text-[#0B0B0F]" value="">Select gender</option>
+            <option className="text-[#0B0B0F]" value="male">Male</option>
+            <option className="text-[#0B0B0F]" value="female">Female</option>
+          </select>
+
+          {errors.gender && touched.gender && (
+            <p className="text-red-500 text-sm font-medium">{errors.gender}</p>
           )}
         </div>
 

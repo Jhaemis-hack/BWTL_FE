@@ -14,6 +14,7 @@ export default {
         "softcrimson": '#C92A2A',
         "emerald": '#2F9E44',
         "slategray": '#495057',
+        "lightgray": '#CFCFCF'
       },
     },
   },

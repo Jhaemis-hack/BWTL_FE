@@ -1,6 +1,9 @@
 import i from "../../assets/time.png";
 import flyer from "../../assets/flyer.jpeg";
 import { Button } from "../ui/button";
+import { TiTime } from "react-icons/ti";
+import { MdOutlineDateRange } from "react-icons/md";
+import { NavHashLink } from "react-router-hash-link";
 
 export interface SessionItemsInterface {
   icon: string;
@@ -37,25 +40,45 @@ export const SessionItems: SessionItemsInterface[] = [
 
 const About = () => {
   return (
-    <div className="flex flex-col gap-3 items-center mt-14 justify-center font-sans text-[#0B0B0F]">
-      <h3 className="text-xl text-white">Upcoming Sessions:</h3>
-      <div className="border-2 shadow-2xs flex gap-3 justify-between px-5 w-[90%] flex-col sm:w-[75%] sm:flex-row flex-wrap pt-4 ">
-        <div className="overflow-hidden sm:flex-1/4 mx-auto">
-          <img src={flyer} className=""/>
+    <div className="flex flex-col gap-3 items-center mt-14 justify-between font-sans text-[#0B0B0F]">
+      <h3 className="text-xl text-[#F48C06] font-bold capitalize font-serif">Upcoming Sessions:</h3>
+      <div className="border-2 shadow-2xs flex gap-3 justify-start w-[95%] sm:w-[85%] ">
+        <div className="overflow-hidden border">
+          <img src={flyer} className="w-[16em] h-[12em]" />
         </div>
-        <div className="flex-1/2 mb-8">
-          <h3 className="font-bold text-xl text-[#CFCFCF]">Understand legal processes</h3>
-          <h3 className="text-[#f4f4f5a4] ">About:</h3>
+        <div className="mb-8">
+          <h3 className="font-bold text-xl text-[#F4F4F5] font-serif">
+            Understanding legal processes
+          </h3>
+          <div className="flex flex-row justify-start items-center mt-4 flex-wrap gap-3">
+            <span className="flex gap-1 text-[#F4F4F5] font-semibold font-serif">
+              <TiTime className="text-[#2F9E44] my-auto text-xl" /> 8AM
+            </span>
+            <span className="flex gap-1 text-[#F4F4F5] font-semibold font-serif">
+              <MdOutlineDateRange className="text-[#2F9E44] my-auto text-xl" /> August
+              28, 2025.
+            </span>
+          </div>
+          {/* <h3 className="text-[#f4f4f5a4] ">About:</h3>
           <p className="py-2 text-[#CFCFCF]">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus,
             nihil numquam! Velit officia asperiores quod numquam unde ad vel
             nesciunt iure, quia reprehenderit iste veniam, eveniet ea tempore
             ipsam provident.
-          </p>
-          <Button variant="secondary" className="self-start md:self-center mt-3"><span className="text-[#0B0B0F] hover:text-[#2F9E44]">Register</span></Button>
+          </p> */}
+          <NavHashLink smooth to={"#register"}>
+            <Button
+              variant="secondary"
+              className="self-start md:self-center mt-3 bg-[#2F9E44] hover:bg-[#2f9e439f]"
+            >
+              <span className="text-[#0B0B0F] hover:text-[#CFCFCF] text-md font-bold cursor-pointer">
+                Secure a seat
+              </span>
+            </Button>
+          </NavHashLink>
         </div>
       </div>
-      <div className="md:max-w-7xl w- mx-auto px-4 mt-20 font-sans">
+      <div className="md:max-w-7xl w- mx-auto px-4 mt-20 font-serif">
         <h3 className="text-xl text-center text-[#CFCFCF] ">
           <strong className="text-[#F48C06]">All in-one</strong> webinar
         </h3>
