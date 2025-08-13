@@ -7,7 +7,7 @@ const ContactUs = () => {
   return (
     <div
       id="contact"
-      className="bg-[#1B2A41] text-[#F4F4F5] h-[10em] relative pt-3"
+      className="bg-[#1B2A41] text-[#F4F4F5] h-[15em] relative pt-3"
     >
       <div className="flex flex-col justify-center items-center">
         <h3 className="pb-4">Get in touch with the Law: </h3>
@@ -17,7 +17,7 @@ const ContactUs = () => {
               <BsInstagram />
             </span>
           </Link>
-          <a href="mailto:gbemilekekenny2@gmail.com">
+          <a href="mailto:Breakfastwiththelaw@gmail.com">
             {" "}
             <span>
               <BiLogoGmail />
@@ -29,7 +29,7 @@ const ContactUs = () => {
             </span>
           </Link>
         </div>
-        <span className="absolute bottom-10 text-[#cfcfcfc9]">
+        <span className="absolute bottom-10 text-[#cfcfcfc9]/40">
           BreakFast with the Law @2025
         </span>
       </div>

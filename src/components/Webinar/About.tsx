@@ -85,7 +85,7 @@ const About = () => {
         <h4 className="text-md text-center text-[#CFCFCF] pb-8">
           What you stand to gain.
         </h4>
-        <div className="flex flex-1 justify-center items-center gap-9 flex-wrap">
+        <div className="flex flex-1 justify-center items-center gap-9 flex-wrap ">
           {SessionItems.map((item, idx) => (
             <Card key={idx} items={item} />
           ))}
@@ -99,7 +99,7 @@ export default About;
 
 function Card({ items }: { items: SessionItemsInterface }) {
   return (
-    <div className="md:w-[14em] w-[14em]  h-[15em] rounded-xl shadow-md text-[#000] bg-[#f4f4f5a4] flex flex-col justify-center items-center px-1 py-2 hover:shadow-lg hover:shadow-[#1B2A41] hover:scale-x-101 ">
+    <div className="md:w-[14em] w-[14em]  h-[15em] rounded-xl shadow-md text-[#000] bg-[#f4f4f5a4] flex flex-col justify-center items-center px-1 py-2 shadow-[#1B2A41] hover:shadow-lg hover:shadow-[#1B2A41] hover:scale-x-101 ">
       <img src={items.icon} alt="item-card-icon" className="w-[25%]" />
       <h3 className="font-bold text-md ">{items.title}</h3>
       <p className="text-center text-xs">{items.descript}</p>

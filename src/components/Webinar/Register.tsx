@@ -217,7 +217,7 @@ const Register = () => {
             onBlur={handleBlur}
             className={`w-full px-3 py-3 border ${
               values.gender ? "border-[#2F9E44] border-2" : "border-[#CFCFCF]"
-            }  text-[#0B0B0F] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2F9E44] focus:text-[#F4F4F5] focus:border-transparent ${
+            }  text-[#F4F4F5] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2F9E44] focus:text-[#F4F4F5] focus:border-transparent ${
               errors.gender && touched.gender ? "border border-red-500" : ""
             }`}
           >
