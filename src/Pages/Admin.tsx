@@ -1,4 +1,3 @@
-import Main from "@/components/Admin/Main";
 import NavBar from "@/components/Admin/NavBar";
 import Sidebar from "@/components/Admin/Sidebar";
 

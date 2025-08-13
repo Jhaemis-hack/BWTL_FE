@@ -1,10 +1,9 @@
-import { ArrowBigRight, X } from "lucide-react";
+import { X } from "lucide-react";
 import logo from "../../assets/time.png";
 import { Button } from "../ui/button";
 import { HashLink, NavHashLink } from "react-router-hash-link";
 import { HiOutlineMenu } from "react-icons/hi";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { MdOutlineDateRange } from "react-icons/md";
 import { TiTime } from "react-icons/ti";
 

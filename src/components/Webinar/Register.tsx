@@ -41,22 +41,22 @@ const Register = () => {
     payload: FormValues,
     actions: FormikHelpers<FormValues>
   ) => {
-    // try {
-    //   const res: ResponseInterface = await Axios.post(
-    //     `${Request.register}`,
-    //     payload
-    //   );
-    //   console.log(res);
+    try {
+      const res: ResponseInterface = await Axios.post(
+        `${Request.register}`,
+        payload
+      );
+      console.log(res);
 
-    //   if (res.success) {
-    //     toast.success(res.data.message);
-    //   }
-    // } catch (error: any) {
-    //   if (error.response)
-    //     toast.error(
-    //       error?.response.data.message || "An error occurred, try again"
-    //     );
-    // }
+      if (res.success) {
+        toast.success(res.data.message);
+      }
+    } catch (error: any) {
+      if (error.response)
+        toast.error(
+          error?.response.data.message || "An error occurred, try again"
+        );
+    }
 
     console.log(payload);
     // setIsOpen(true);
