@@ -7,7 +7,7 @@ const ContactUs = () => {
   return (
     <div
       id="contact"
-      className="bg-[#1B2A41] text-[#F4F4F5] h-[15em] relative pt-3"
+      className="bg-[#1B2A41] text-[#F4F4F5] h-[10em] relative pt-3"
     >
       <div className="flex flex-col justify-center items-center">
         <h3 className="pb-4">Get in touch with the Law: </h3>
