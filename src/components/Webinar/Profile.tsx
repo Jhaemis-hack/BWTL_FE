@@ -3,7 +3,7 @@ import profile from "../../assets/mr_pelumi.jpg";
 const Profile = () => {
   return (
     <div id="speaker" className="mt-6 py-40 flex flex-col justify-center font-sans items-center bg-[#1B2A41] text-[#495057]">
-      <h2 className="pb-9 text-3xl font-black text-[#CFCFCF] font-sans">Speaker</h2>
+      <h2 className="pb-9 text-3xl font-black text-[#CFCFCF] font-sans">Host</h2>
       <div className="relative rounded-full w-[15em] h-[15em] border-2 overflow-hidden hover:shadow-[0_0_25px_rgba(0,0,0,0.25)] hover:shadow-[#2F9E44] mb-5">
         <img src={profile} alt="profile" className="absolute -top-8" />
       </div>

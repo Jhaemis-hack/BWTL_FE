@@ -20,30 +20,25 @@ const Header = () => {
         <div className="flex justify-between items-center px-3 sm:px-3">
           <img src={logo} className="h-8 w-8" />
 
-          <div className="hidden sm:flex sm:ml-10 flex-row sm:gap-7 text-[#F4F4F5] ">
+          <div className="hidden sm:flex sm:ml-10 flex-row sm:gap-7 text-[#F4F4F5] capitalize">
             <HashLink smooth to="/">
               <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
                 Home
               </h3>
             </HashLink>
-            <HashLink smooth to="#about">
+            <HashLink smooth to="#speaker">
               <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
-                About
+                Host
               </h3>
             </HashLink>
             <HashLink smooth to="#register">
               <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
-                register
-              </h3>
-            </HashLink>
-            <HashLink smooth to="#speaker">
-              <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
-                Speaker
+                Register
               </h3>
             </HashLink>
             <HashLink smooth to="#contact">
               <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
-                contact
+                Contact
               </h3>
             </HashLink>
           </div>
@@ -95,19 +90,14 @@ const Header = () => {
                 Home
               </h3>
             </HashLink>
-            <HashLink smooth to="#about">
+            <HashLink smooth to="#speaker">
               <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
-                About
+                Host
               </h3>
             </HashLink>
             <HashLink smooth to="#register">
               <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
                 register
-              </h3>
-            </HashLink>
-            <HashLink smooth to="#speaker">
-              <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
-                Speaker
               </h3>
             </HashLink>
             <HashLink smooth to="#contact">
@@ -127,15 +117,15 @@ const Header = () => {
             <span className="text-[#2F9E44] font-semibold text-xl">
               upcoming:{" "}
             </span>
-            Understanding Start up Compliance{" "} 
+            Understanding Start up Compliance{" "}
           </p>
           <div className="flex flex-row justify-start items-center mt-1 mb-2 flex-wrap gap-3">
             <span className="flex gap-1 text-[#F4F4F5] font-semibold font-serif">
               <TiTime className="text-[#2F9E44] my-auto text-xl" /> 8AM
             </span>
             <span className="flex gap-1 text-[#F4F4F5] font-semibold font-serif">
-              <MdOutlineDateRange className="text-[#2F9E44] my-auto text-xl" /> August
-              28, 2025.
+              <MdOutlineDateRange className="text-[#2F9E44] my-auto text-xl" />{" "}
+              August 28, 2025.
             </span>
           </div>
           {/* <NavHashLink smooth to={"#register"}>

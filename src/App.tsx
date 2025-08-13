@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     Component: RegSuccess, 
   },
   {
-    path: "/admin/main",
+    path: "/admin/main/bwtl",
     Component: Admin, 
   },
   {
