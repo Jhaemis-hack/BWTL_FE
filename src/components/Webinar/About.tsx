@@ -4,6 +4,8 @@ import { Button } from "../ui/button";
 import { TiTime } from "react-icons/ti";
 import { MdOutlineDateRange } from "react-icons/md";
 import { NavHashLink } from "react-router-hash-link";
+import { SVG } from "@/constants";
+import { GrLocation } from "react-icons/gr";
 
 export interface SessionItemsInterface {
   icon: string;
@@ -13,36 +15,39 @@ export interface SessionItemsInterface {
 
 export const SessionItems: SessionItemsInterface[] = [
   {
-    icon: i,
-    title: "Trade mark consultation",
-    descript:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nisi consequuntur cum magni! Vel laudantium odio explicabo dignissimos tempora repellat odit praesentium provident! Reiciendis aspernatur aut dolores, beatae quidem cupiditate!",
+    icon: SVG.chip,
+    title: "Intellectual Property & Technology",
+    descript: `Learn about protecting and commercializing intellectual property through trademark, patent, copyright, and industrial design registration, licensing structures, technology transfer, franchising models, and resolving infringement disputes.`,
   },
   {
-    icon: i,
-    title: "Legal consultation",
-    descript:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nisi consequuntur cum magni! Vel laudantium odio explicabo dignissimos tempora repellat odit praesentium provident! Reiciendis aspernatur aut dolores, beatae quidem cupiditate!",
+    icon: SVG.briefcase,
+    title: "Corporate & Compliance",
+    descript: `Gain insights into entity formation, corporate restructuring, complex commercial contracts, regulatory compliance, governance, and policy development.`,
   },
   {
-    icon: i,
-    title: "Tax advisory",
-    descript:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nisi consequuntur cum magni! Vel laudantium odio explicabo dignissimos tempora repellat odit praesentium provident! Reiciendis aspernatur aut dolores, beatae quidem cupiditate!",
+    icon: SVG.data,
+    title: "AI, Data & Digital",
+    descript: `Explore strategies for AI adoption and integration, data privacy compliance, and ethical governance to manage risks in the digital era.`,
   },
   {
-    icon: i,
-    title: "Internal policy formulation",
-    descript:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita nisi consequuntur cum magni! Vel laudantium odio explicabo dignissimos tempora repellat odit praesentium provident! Reiciendis aspernatur aut dolores, beatae quidem cupiditate!",
+    icon: SVG.tax,
+    title: "Tax Advisory",
+    descript: `Gain insights on tax planning, optimization, and compliance, with strategies to maximize efficiency under Nigerian law and effectively resolve disputes with tax authorities.`,
+  },
+  {
+    icon: SVG.board,
+    title: "Board & Executive Training",
+    descript: `Develop practical skills in directors’ duties, regulatory compliance, and board governance, with training on liability management, crisis preparedness, and strategies to enhance board effectiveness.`,
   },
 ];
 
 const About = () => {
   return (
     <div className="flex flex-col gap-3 items-center mt-14 justify-between font-sans text-[#0B0B0F]">
-      <h3 className="text-xl text-[#F48C06] font-bold capitalize font-serif">Upcoming Sessions:</h3>
-      <div className="border-2 shadow-2xs flex gap-3 justify-start w-[95%] sm:w-[85%] ">
+      <h3 className="text-xl text-[#F48C06] font-bold capitalize font-serif">
+        Upcoming Sessions:
+      </h3>
+      <div className="border-2 shadow-2xs flex gap-3 justify-start w-[95%] sm:w-[85%] md:w-[80%] lg:w-[50em] mx-auto">
         <div className="overflow-hidden border">
           <img src={flyer} className="w-[16em] h-[12em]" />
         </div>
@@ -55,17 +60,14 @@ const About = () => {
               <TiTime className="text-[#2F9E44] my-auto text-xl" /> 8AM
             </span>
             <span className="flex gap-1 text-[#F4F4F5] font-semibold font-serif">
-              <MdOutlineDateRange className="text-[#2F9E44] my-auto text-xl" /> August
-              28, 2025.
+              <MdOutlineDateRange className="text-[#2F9E44] my-auto text-xl" />{" "}
+              August 28, 2025.
+            </span>
+            <span className="flex gap-1 text-[#F4F4F5] font-semibold font-serif">
+              <GrLocation className="text-[#2F9E44] my-auto text-xl" /> ATB Tech
+              Hub.
             </span>
           </div>
-          {/* <h3 className="text-[#f4f4f5a4] ">About:</h3>
-          <p className="py-2 text-[#CFCFCF]">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus,
-            nihil numquam! Velit officia asperiores quod numquam unde ad vel
-            nesciunt iure, quia reprehenderit iste veniam, eveniet ea tempore
-            ipsam provident.
-          </p> */}
           <NavHashLink smooth to={"#register"}>
             <Button
               variant="secondary"
@@ -78,7 +80,7 @@ const About = () => {
           </NavHashLink>
         </div>
       </div>
-      <div className="md:max-w-7xl w- mx-auto px-4 mt-20 font-serif">
+      <div className="md:max-w-7xl mx-auto px-4 mt-20 font-serif">
         <h3 className="text-xl text-center text-[#CFCFCF] ">
           <strong className="text-[#F48C06]">All in-one</strong> webinar
         </h3>
@@ -99,10 +101,18 @@ export default About;
 
 function Card({ items }: { items: SessionItemsInterface }) {
   return (
-    <div className="md:w-[14em] w-[14em]  h-[15em] rounded-xl shadow-md text-[#000] bg-[#f4f4f5a4] flex flex-col justify-center items-center px-1 py-2 shadow-[#1B2A41] hover:shadow-lg hover:shadow-[#1B2A41] hover:scale-x-101 ">
-      <img src={items.icon} alt="item-card-icon" className="w-[25%]" />
-      <h3 className="font-bold text-md ">{items.title}</h3>
-      <p className="text-center text-xs">{items.descript}</p>
+    <div className="md:w-[14em] w-[15em] text-[#F4F4F5] h-[15em] rounded-xl shadow-md bg-[#1B2A41]/95 flex flex-col text-wrap justify-center items-center px-2 py-2 shadow-[#1B2A41] hover:shadow-md hover:shadow-[#2F9E44] hover:scale-x-101 ">
+      {/* <img src={items.icon} alt="item-card-icon" className="w-[25%]" /> */}
+      {/* <span className="w-[25%]">{}</span> */}
+      <span
+        dangerouslySetInnerHTML={{
+          __html: items.icon,
+        }}
+      />
+      <h3 className="font-bold text-md text-center mb-2">{items.title}</h3>
+      <p className="text-center text-xs text-[#CFCFCF] leading-4 font-sans">
+        {items.descript}
+      </p>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import { HiOutlineMenu } from "react-icons/hi";
 import { useState } from "react";
 import { MdOutlineDateRange } from "react-icons/md";
 import { TiTime } from "react-icons/ti";
+import { GrLocation } from "react-icons/gr";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -16,10 +17,9 @@ const Header = () => {
       onClick={() => (isMenuOpen ? setIsMenuOpen(!isMenuOpen) : null)}
       className="text-[#F4F4F5] font-sans bg-[url('/image.png')] bg-cover bg-center h-[20em] overflow-x-hidden overflow-y-hidden relative"
     >
-      <div className="bg-[#1B2A41]/80 pt-5 h-full ">
+      <div className="bg-[#1B2A41]/80 pt-5 h-full">
         <div className="flex justify-between items-center px-3 sm:px-3">
-          <img src={logo} className="h-8 w-8" />
-
+          <img src={logo} className="h-9 w-9 cursor-pointer"/>
           <div className="hidden sm:flex sm:ml-10 flex-row sm:gap-7 text-[#F4F4F5] capitalize">
             <HashLink smooth to="/">
               <h3 className="hover:text-[#2F9E44] cursor-pointer hover:scale-110">
@@ -48,9 +48,9 @@ const Header = () => {
           <NavHashLink smooth to={"#register"}>
             <Button
               variant="secondary"
-              className=" mt-1 cursor-pointer hidden sm:flex px-1"
+              className=" mt-1 cursor-pointer hidden sm:flex px-2 bg-[#1B2A41]/0 hover:bg-[#1B2A41]"
             >
-              <span className="text-[#0B0B0F] hover:text-[#2F9E44] font-semibold font-serif">
+              <span className="text-[#F4F4F5] hover:text-[#F4F4F5] font-semibold font-serif">
                 Register here
               </span>
             </Button>
@@ -108,9 +108,8 @@ const Header = () => {
           </nav>
         </div>
         {/* )} */}
-
         <div className="flex flex-col justify-center items-center py-[3em] px-[1em] ">
-          <h1 className="text-[#F4F4F5] text-3xl sm:text-5xl capitalize">
+          <h1 className="text-[#F4F4F5] text-3xl sm:text-5xl capitalize font-extrabold" style={{textShadow: "0px 0px 8px #0B0B0F"}}>
             Breakfast With The Law
           </h1>
           <p className="sm:self-center decorate-[#2F9E44] text-wrap text-center capitalize font-medium transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
@@ -126,6 +125,10 @@ const Header = () => {
             <span className="flex gap-1 text-[#F4F4F5] font-semibold font-serif">
               <MdOutlineDateRange className="text-[#2F9E44] my-auto text-xl" />{" "}
               August 28, 2025.
+            </span>
+            <span className="flex gap-1 text-[#F4F4F5] font-semibold font-serif">
+              <GrLocation className="text-[#2F9E44] my-auto text-xl" /> ATB Tech
+              Hub.
             </span>
           </div>
           {/* <NavHashLink smooth to={"#register"}>
