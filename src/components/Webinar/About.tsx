@@ -1,4 +1,3 @@
-import i from "../../assets/time.png";
 import flyer from "../../assets/flyer.jpeg";
 import { Button } from "../ui/button";
 import { TiTime } from "react-icons/ti";
